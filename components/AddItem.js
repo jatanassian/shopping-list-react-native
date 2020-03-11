@@ -8,7 +8,7 @@ import {
 } from 'react-native';
 import Icon from 'react-native-vector-icons/dist/FontAwesome';
 
-const AddItem = addItem => {
+const AddItem = ({addItem}) => {
   const [text, setText] = useState('');
 
   const onChange = textValue => setText(textValue);
