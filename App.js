@@ -16,7 +16,7 @@ const App = () => {
   const deleteItem = id => {
     setItems(prevItems => {
       // We don't want to return the item that has the matching id
-      return prevItems.filter(item => item.id != id);
+      return prevItems.filter(item => item.id !== id);
     });
   };
 
