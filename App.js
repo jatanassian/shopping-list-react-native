@@ -3,14 +3,14 @@ import {View, StyleSheet, FlatList, Alert} from 'react-native';
 import Header from './components/Header';
 import ListItem from './components/ListItem';
 import AddItem from './components/AddItem';
-import {uuid} from 'uuidv4';
+import id from './util/id';
 
 const App = () => {
   const [items, setItems] = useState([
-    {id: uuid(), text: 'Milk'},
-    {id: uuid(), text: 'Eggs'},
-    {id: uuid(), text: 'Bread'},
-    {id: uuid(), text: 'Orange juice'},
+    {id: id(), text: 'Milk'},
+    {id: id(), text: 'Eggs'},
+    {id: id(), text: 'Bread'},
+    {id: id(), text: 'Orange juice'},
   ]);
 
   const deleteItem = id => {
@@ -25,7 +25,7 @@ const App = () => {
       Alert.alert('Error', 'Please enter an item', {text: 'Ok'});
     } else {
       setItems(prevItems => {
-        return [{id: uuid(), text}, ...prevItems];
+        return [{id: id(), text}, ...prevItems];
       });
     }
   };
