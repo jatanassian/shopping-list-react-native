@@ -9,6 +9,11 @@ const Header = ({title}) => {
   );
 };
 
+// This is a default prop that will be used in case no prop is being passed by the parent
+Header.defaultProps = {
+  title: 'Shopping List',
+};
+
 const styles = StyleSheet.create({
   header: {
     height: 60,
