@@ -12,12 +12,21 @@ const App = () => {
     {id: uuid(), text: 'Orange juice'},
   ]);
 
+  const deleteItem = id => {
+    setItems(prevItems => {
+      // We don't want to return the item that has the matching id
+      return prevItems.filter(item => item.id != id);
+    });
+  };
+
   return (
     <View style={styles.container}>
       <Header title="Shopping List" />
       <FlatList
         data={items}
-        renderItem={({item}) => <ListItem item={item} />}
+        renderItem={({item}) => (
+          <ListItem item={item} deleteItem={deleteItem} />
+        )}
       />
     </View>
   );
