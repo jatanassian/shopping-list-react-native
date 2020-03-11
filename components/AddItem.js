@@ -17,7 +17,7 @@ const AddItem = ({addItem}) => {
     <View>
       <TextInput
         placeholder="Add item..."
-        style={StyleSheet.input}
+        style={styles.input}
         onChangeText={onChange}
       />
       <TouchableOpacity style={styles.btn} onPress={() => addItem(text)}>
