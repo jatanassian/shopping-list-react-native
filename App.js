@@ -3,8 +3,8 @@ import {View, Text} from 'react-native';
 
 const App = () => {
   return (
-    <View>
-      <Text>Hello World</Text>
+    <View style={{flex: 1, justifyContent: 'center', alignItems: 'center'}}>
+      <Text style={{color: 'darkslateblue', fontSize: 30}}>Hello World</Text>
     </View>
   );
 };
