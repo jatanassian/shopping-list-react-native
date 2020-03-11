@@ -23,6 +23,7 @@ const App = () => {
   return (
     <View style={styles.container}>
       <Header title="Shopping List" />
+      <AddItem />
       <FlatList
         data={items}
         renderItem={({item}) => (
